@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Generation Error — ComicCraft
+{% endblock %}
+
+
+{% block content %}
+
+<section class="card error-card">
+
+    <p class="eyebrow">
+        SOMETHING WENT WRONG
+    </p>
+
+    <h1>
+        Comic generation failed.
+    </h1>
+
+    <p>
+        {{ error }}
+    </p>
+
+    <div class="actions">
+
+        <a
+            href="/"
+            class="primary-btn"
+        >
+            Back to ComicCraft
+        </a>
+
+        <a
+            href="/docs"
+            class="secondary-btn"
+        >
+            API Docs
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
