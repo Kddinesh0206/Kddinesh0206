@@ -153,6 +153,32 @@ async def generate(
         )
 
 
+@router.get(
+    "/generate",
+    response_class=HTMLResponse
+)
+async def generate_form(
+    request: Request
+):
+
+    settings = get_settings()
+
+    return templates.TemplateResponse(
+
+        request=request,
+
+        name="index.html",
+
+        context={
+
+            "request": request,
+
+            "demo_mode":
+                settings.demo_mode
+        }
+    )
+
+
 @router.post(
     "/generate-comic/json"
 )
